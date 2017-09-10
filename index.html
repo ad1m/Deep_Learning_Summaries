@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Semantic UI CDN</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.js"></script>
+</head>
+<body>
+
+    <style>
+    #text{ 
+      margin: 0 auto;
+      width: 80%
+
+    }
+    p {
+      line-height: 200%;
+      font-size: 16px;
+    }
+    </style>
+
+
+
+
+      <!-- Your Semantic UI Code -->
+      <div class="ui top attached demo menu">
+  <a class="item menu_opener">
+    <i class="sidebar icon"></i> Menu
+  </a>
+  <a class="right item nonmenu" id="bio">Adam Lieberman</a>
+</div>
+<div class="ui bottom attached segment">
+  <div class="ui inverted labeled icon left inline vertical demo sidebar menu" id="Menu">
+    <a class="item" href="https://www.google.com">
+      <!--<i class="home icon"></i>--> Chapter 1
+    </a>
+    <a class="item"> 
+      <!--<i class="block layout icon"></i>--> Chapter 2
+    </a>
+    <a class="item" value="2">
+      <!--<i class="smile icon"></i>--> Chapter 3
+    </a>
+    <a class="item" value="3">
+      <!--<i class="calendar icon"></i>--> Chapter 4
+    </a>
+  </div>
+  <div class="pusher" id="HomePage">
+    <div class="ui basic segment">
+      <center><h3 class="ui header"><font color="orange">Deep Learning</font></h3></center>
+      <div id="text">
+      <p>This has the Home page</p>
+      <p></p>
+      <p></p>
+      <p></p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+      <!-- Scripts --> 
+
+      <script> 
+      	$(document).ready(function(){
+    $('#Menu').on('change', function() {
+      if ( this.value == '1')
+      {
+        $("#chapter1").show();
+        $("#HomePage").hide();
+      }
+      else
+      {
+        $("HomePage").hide();
+      }
+    });
+});
+
+
+      </script>
+      <script>$('.ui.sidebar').sidebar({
+    context: $('.bottom.segment')
+  })
+  .sidebar('attach events', '.menu .menu_opener');</script>
+</body>
+</html>
